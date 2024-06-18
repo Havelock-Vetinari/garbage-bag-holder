@@ -1,3 +1,5 @@
+include <hex-grid.scad>
+
 diameter=200;
 height=300;
 ring_diameter=14;
@@ -10,9 +12,11 @@ joint_interlock_tolerance=0.25; // Asuming millimeter as unit. Adjust for your p
 
 // switches for stl exporting:
 show_top_ring = true;
-show_middle_ring = false;
-show_bottom_ring = false;
-show_poles = false;
+show_middle_ring = true;
+show_bottom_ring = true;
+show_poles = true;
+
+show_aux_base = true;
 // use below part for support pole print
 show_single_pole = false;
 
@@ -94,6 +98,18 @@ if (show_poles) {
             pole(pole_d=support_diameter, pole_h=support_height, pin_diam=support_pin_diam, pin_len=support_pin_len);
         }    
     }
+}
+
+if (show_aux_base) {
+    base_diameter = (diameter - 2 * ring_diameter) - 20;
+    translate([0, 0, 0]) {
+        //difference() {
+            //cylinder(d = base_diameter, h = 20);
+            create_grid(size=[base_diameter, base_diameter, 20],SW=20, wall=4);
+            
+        //}
+    }
+    
 }
 
 if (show_single_pole) {
