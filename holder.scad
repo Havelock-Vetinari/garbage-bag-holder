@@ -1,4 +1,4 @@
-include <hex-grid.scad>
+include <hex-grid.scad> // From https://www.printables.com/model/86604-hexagonal-grid-generator-in-openscad
 
 // BOSL2 library is required for aux base grid generation (above include)
 // For instalation details see: https://github.com/BelfrySCAD/BOSL2 
@@ -20,7 +20,7 @@ base_thickness = 6;
 base_wall_thickness = 6;
 base_rim_height = 15;
 
-aux_support_height = 170;
+aux_support_height = 125;
 aux_support_pole_diam = 8;
 aux_support_pin_diam = 4;
 aux_support_pin_len = 4;
