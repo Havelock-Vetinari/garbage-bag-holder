@@ -6,6 +6,8 @@ This [OpenSCAD](https://openscad.org) project creates a practical garbage bag ho
 
 The garbage bag holder consists of a main frame supported by three circular rings, a hexagonal auxiliary base, and several support poles. The design is sturdy and modular, allowing for easy adjustments and customizations.
 
+![holder render](docs/holder%20-%20all%20render.png?raw=true)
+
 ## Detailed Design Elements
 
 ### Support Rings
